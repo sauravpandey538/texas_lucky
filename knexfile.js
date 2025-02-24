@@ -26,17 +26,12 @@ const knexConfig = {
   },
   production: {
     client: "pg",
-    connection: {
-      host: process.env.POSTGRES_HOST,
-      port: 5432, // ✅ Default PostgreSQL port
-      user: process.env.POSTGRES_USER, // Change to your PostgreSQL username
-      password: process.env.POSTGRES_PASSWORD, // Change to your PostgreSQL password
-      database: process.env.POSTGRES_DATABASE, // Change to your database name
-    },
-    ssl: {
-      rejectUnauthorized: false,
-      sslmode: "require",
-    },
+    connection: process.env.POSTGRES_URL,
+    ssl: false,
+    // ssl: {
+    //   rejectUnauthorized: false,
+    //   sslmode: "require",
+    // },
     migrations: {
       tableName: "knex_migrations",
       directory: "./migrations",

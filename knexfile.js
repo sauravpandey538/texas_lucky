@@ -27,7 +27,6 @@ const knexConfig = {
   production: {
     client: "pg",
     connection: process.env.POSTGRES_URL,
-    ssl: false,
     ssl: {
       rejectUnauthorized: false,
       // sslmode: "require",

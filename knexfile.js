@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-//console.log("url is ", process.env.DATABASE_URL);
+console.log("url is ", process.env.POSTGRES_URL);
 const knexConfig = {
   development: {
     client: "pg",

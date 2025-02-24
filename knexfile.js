@@ -33,10 +33,10 @@ const knexConfig = {
       password: process.env.POSTGRES_PASSWORD, // Change to your PostgreSQL password
       database: process.env.POSTGRES_DATABASE, // Change to your database name
     },
-    // ssl: {
-    //   rejectUnauthorized: false,
-    //   sslmode: "require",
-    // },
+    ssl: {
+      rejectUnauthorized: false,
+      sslmode: "require",
+    },
     migrations: {
       tableName: "knex_migrations",
       directory: "./migrations",

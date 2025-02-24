@@ -28,10 +28,10 @@ const knexConfig = {
     client: "pg",
     connection: process.env.POSTGRES_URL,
     ssl: false,
-    // ssl: {
-    //   rejectUnauthorized: false,
-    //   sslmode: "require",
-    // },
+    ssl: {
+      rejectUnauthorized: false,
+      // sslmode: "require",
+    },
     migrations: {
       tableName: "knex_migrations",
       directory: "./migrations",
